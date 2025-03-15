@@ -1,0 +1,21 @@
+import telebot
+
+
+api = 'Custom with yours'
+
+ 
+
+bot = telebot.TeleBot(api)
+
+@bot.message_handler(commands=['start'])
+
+def send_welcome(message):
+
+    bot.reply_to(message, 'Your text here')
+
+ 
+
+print('Bot Running....')
+
+bot.polling()
+
